@@ -12,6 +12,7 @@ func Entropy(n int, p int) float64 {
 	i := 0
 	result := 0.0
 
+	// These cases represent invalid input values.
 	if (n < 1) || (n >= p) {
 		return 0.0
 	}
@@ -24,7 +25,8 @@ func Entropy(n int, p int) float64 {
 		result -= math.Log(float64(i))
 	}
 
-	result /= 0.69315
+	// Convert to the number of bits required.
+	result /= math.Log(float64(2))
 
 	return result
 }
