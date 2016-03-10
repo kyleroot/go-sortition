@@ -8,7 +8,7 @@ func main() {
 
 }
 
-func Entropy(n int, p int) float64 {
+func Entropy(n int, p int) int {
 	i := 0
 	result := 0.0
 
@@ -28,5 +28,6 @@ func Entropy(n int, p int) float64 {
 	// Convert to the number of bits required.
 	result /= math.Log(float64(2))
 
-	return result
+	// Return the number of bits reqr'd.
+	return int(math.Ceil(result))
 }
