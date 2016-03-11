@@ -25,3 +25,17 @@ func TestEntropyOnExampleValues(t *testing.T) {
 		}
 	}
 }
+
+func TestEntropyNGreaterThanP(t *testing.T) {
+	// Trying to select more items than are in the pool.
+	if Entropy(10, 5) != 0 {
+		t.Fail()
+	}
+}
+
+func TestEntropyNoSelectedItems(t *testing.T) {
+	// Cannot select less than one item.
+	if Entropy(0, 5) != 0 {
+		t.Fail()
+	}
+}
