@@ -8,13 +8,17 @@ func main() {
 
 }
 
+func usage() {
+
+}
+
 func Entropy(n int, p int) int {
 	i := 0
 	result := 0.0
 
 	// These cases represent invalid input values.
 	if (n < 1) || (n >= p) {
-		return 0.0
+		return 0
 	}
 
 	for i = p; i > (p - n); i-- {
