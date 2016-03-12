@@ -2,14 +2,15 @@ package rfc3797
 
 import (
 	"math"
+	"os"
 )
 
 func main() {
-
+	os.Exit(0)
 }
 
 func usage() {
-
+	os.Exit(2)
 }
 
 func Entropy(n int, p int) int {
@@ -29,9 +30,8 @@ func Entropy(n int, p int) int {
 		result -= math.Log(float64(i))
 	}
 
-	// Convert to the number of bits required.
+	// Convert to the number of bits reqr'd.
 	result /= math.Log(float64(2))
 
-	// Return the number of bits reqr'd.
 	return int(math.Ceil(result))
 }
