@@ -2,16 +2,7 @@ package rfc3797
 
 import (
 	"math"
-	"os"
 )
-
-func main() {
-	os.Exit(0)
-}
-
-func usage() {
-	os.Exit(2)
-}
 
 func Entropy(n int, p int) int {
 	i := 0
